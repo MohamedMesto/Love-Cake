@@ -88,7 +88,17 @@ def calculate_cake_surplus_data(sales_row):
     stock = SHEET.worksheet("stock").get_all_values()
     # to only the last row in the stock
     stock_row = stock[-1]
-    print(stock_row)
+
+
+
+    cake_surplus_data = []
+    for stock, sales in zip(stock_row, sales_row):
+        surplus = int(stock) - sales
+        cake_surplus_data.append(surplus)
+
+    return cake_surplus_data
+
+
 
 
 #  Run the main program functions
@@ -99,7 +109,9 @@ def main_cake_run():
     data = get_cake_sales_data()
     cake_sales_data = [int(num) for num in data]
     update_cake_sales_worksheet(cake_sales_data)
-    calculate_cake_surplus_data(cake_sales_data)
+    cake_surplus_data = calculate_cake_surplus_data(cake_sales_data)
+    print(cake_surplus_data) 
+ 
 
  
 if __name__ == '__main__':
