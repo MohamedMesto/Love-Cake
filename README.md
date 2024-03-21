@@ -1,4 +1,4 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Cake logo](assets/images/readme_images/logo.jpg)
 
 Welcome,
 
