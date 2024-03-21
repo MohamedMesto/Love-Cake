@@ -18,16 +18,37 @@ SHEET = GSPREAD_CLIENT.open('love_cake')
 
 # Get sales figures input from the user
 
-def get_sales_data():
+def get_cake_sales_data():
     """
     Get sales figures input from the user.
     """
-    print("Please enter sales data from the last market.")
+    print("Please enter cake sales data from the last market.")
     print("Data should be five numbers, separated by commas.")
     print("Example: 10,20,30,40,50\n")
 
     data_str = input("Enter your data here: ")
-    print(f"The data provided is {data_str}")
+    sales_data = data_str.split(",")
+    validate_cake_data(sales_data)
+ 
 
 
-get_sales_data()
+ 
+
+# Get sales figures input from the user
+    
+def validate_cake_data(values):
+    """
+    Inside the try, converts all string values into integers.
+    Raises ValueError if strings cannot be converted into int,
+    or if there aren't exactly 5 values.
+    """
+    try:
+        if len(values) != 5:
+            raise ValueError(
+                f"Exactly 5 values required, you provided {len(values)}"
+            )
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+
+
+get_cake_sales_data()

@@ -1,7 +1,7 @@
 
 ![CI logo](assets/favicon/apple-touch-icon-180x180.png) 
 
-# Cake Shop Website
+# Cake Shop Website Calculation
 
 ## Welcome
 
