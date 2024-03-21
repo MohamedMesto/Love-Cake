@@ -105,12 +105,22 @@ def calculate_cake_surplus_data(sales_row):
 
     cake_surplus_data = []
     for stock, sales in zip(stock_row, sales_row):
+        # change to integer
         surplus = int(stock) - sales
         cake_surplus_data.append(surplus)
 
     return cake_surplus_data
 
 
+def update_worksheet(data, worksheet):
+    """
+    Receives a list of integers to be inserted into a worksheet
+    Update the relevant worksheet with the data provided
+    """
+    print(f"Updating {worksheet} worksheet...\n")
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(data)
+    print(f"{worksheet} worksheet updated successfully\n")
 
 
 #  Run the main program functions
@@ -120,9 +130,9 @@ def main_cake_run():
     """
     data = get_cake_sales_data()
     cake_sales_data = [int(num) for num in data]
-    update_cake_sales_worksheet(cake_sales_data)
+    update_worksheet(cake_sales_data, "sales")
     new_surplus_data = calculate_cake_surplus_data(cake_sales_data)
-    update_cake_surplus_worksheet(new_surplus_data)
+    update_worksheet(new_surplus_data, "surplus")
  
 
  
