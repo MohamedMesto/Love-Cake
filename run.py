@@ -75,6 +75,18 @@ def update_cake_sales_worksheet(data):
     print("Cake Sales worksheet updated successfully.\n")
 
 
+# Update sales worksheet, add new row with the list data provided
+    
+def update_cake_surplus_worksheet(data):
+    """
+    Update cake surplus worksheet, add new row with the list data provided
+    """
+    print("Updating Cake surplus worksheet...\n")
+    cake_surplus_worksheet = SHEET.worksheet("surplus")
+    cake_surplus_worksheet.append_row(data)
+    print("Cake surplus worksheet updated successfully.\n")
+
+
 # Comparison Method 
 def calculate_cake_surplus_data(sales_row):
     """
@@ -109,8 +121,8 @@ def main_cake_run():
     data = get_cake_sales_data()
     cake_sales_data = [int(num) for num in data]
     update_cake_sales_worksheet(cake_sales_data)
-    cake_surplus_data = calculate_cake_surplus_data(cake_sales_data)
-    print(cake_surplus_data) 
+    new_surplus_data = calculate_cake_surplus_data(cake_sales_data)
+    update_cake_surplus_worksheet(new_surplus_data)
  
 
  
