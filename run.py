@@ -22,14 +22,18 @@ def get_cake_sales_data():
     """
     Get sales figures input from the user.
     """
-    print("Please enter cake sales data from the last market.")
-    print("Data should be five numbers, separated by commas.")
-    print("Example: 10,20,30,40,50\n")
+    while True:
+        print("Please enter cake sales data from the last market.")
+        print("Data should be five numbers, separated by commas.")
+        print("Example: 10,20,30,40,50\n")
 
-    data_str = input("Enter your data here: ")
-    sales_data = data_str.split(",")
-    validate_cake_data(sales_data)
- 
+        data_str = input("Enter your data here: ")
+        cake_sales_data = data_str.split(",")
+        if validate_cake_data(cake_sales_data):
+           print("Cake Data Insertion is valid!")
+           break
+
+    return cake_sales_data
 
 
  
@@ -50,6 +54,8 @@ def validate_cake_data(values):
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
+        return False
 
+    return True
 
 get_cake_sales_data()
