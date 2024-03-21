@@ -1,6 +1,23 @@
-![Cake logo](assets/images/readme_images/logo.jpg)
+ 
 
-Welcome,
+ 
+<table>
+
+
+<tr>
+<td><img align="left"  alt="Mohamed Mesto" width="450px" height='300px' src="assets/images/readme_images/logo.jpg" /> 
+
+</td>
+
+
+<td>
+ 
+
+</td>
+</tr>
+
+<tr>
+<td>Welcome,
 
 This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
 
@@ -29,4 +46,12 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 
 ---
 
-Happy coding!
+Happy coding!</td>
+
+
+<td></td>
+</tr>
+
+
+</table>
+ 
