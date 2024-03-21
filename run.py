@@ -58,4 +58,22 @@ def validate_cake_data(values):
 
     return True
 
-get_cake_sales_data()
+ 
+
+
+
+# Update cake sales worksheet, add new row with the list data provided
+
+def update_cake_sales_worksheet(data):
+    """
+    Update sales worksheet, add new row with the list data provided
+    """
+    print("Updating sales worksheet...\n")
+    sales_worksheet = SHEET.worksheet("sales")
+    sales_worksheet.append_row(data)
+    print("Sales worksheet updated successfully.\n")
+
+
+data = get_cake_sales_data()
+cake_sales_data = [int(num) for num in data]
+update_cake_sales_worksheet(cake_sales_data)
