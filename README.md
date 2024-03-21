@@ -1,22 +1,35 @@
- 
+
+![CI logo](assets/favicon/apple-touch-icon-180x180.png) 
+
+# Cake Shop Website
+
+## Welcome
 
  
-<table>
+Welcome to the Cake Shop Website! This project aims to provide a comprehensive solution for managing a cake shop's online presence and facilitating sales. Whether you're a small bakery looking to expand your reach or an established cake shop wanting to streamline your online sales process, this website offers a user-friendly interface for both customers and administrators.
 
+## Features:
+Product Catalog: Display a wide variety of cakes and other baked goods with detailed descriptions and images.
+Order Management: Allow customers to place orders seamlessly, with features such as customizable cakes, delivery options, and order tracking.
+User Authentication: Secure user accounts for both customers and administrators, ensuring privacy and access control.
+Payment Integration: Enable secure online payments through various payment gateways, providing convenience and trust to customers.
+Inventory Management: Keep track of available stock, manage ingredient procurement, and receive notifications for low stock levels.
+Reporting and Analytics: Generate reports on sales, popular products, and customer trends to make informed business decisions.
+Responsive Design: Ensure a seamless experience across different devices, including desktops, tablets, and smartphones.
 
-<tr>
-<td><img align="left"  alt="Mohamed Mesto" width="450px" height='300px' src="assets/images/readme_images/logo.jpg" /> 
+## Getting Started:
+To set up the Cake Shop Website locally for development or testing purposes, follow these steps:
 
-</td>
+Clone this repository to your local machine.
+Install dependencies using npm install or yarn install.
+Configure environment variables for database connection, payment integration, and other settings (see .env.example).
+Run the application using npm start or yarn start.
+Access the website via http://localhost:3000 in your web browser.
+Contributing:
+We welcome contributions from the community to enhance and improve the Cake Shop Website. If you have any ideas, bug fixes, or feature requests, feel free to open an issue or submit a pull request. Please ensure to follow our contribution guidelines for smooth collaboration.
 
-
-
-</tr>
-
-<tr>
-<td>Welcome,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+License:
+This project is licensed under the MIT License, which means you are free to use, modify, and distribute the code for both personal and commercial purposes. However, we appreciate attribution to the original creators.
 
 ## Reminders
 
@@ -43,12 +56,4 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 
 ---
 
-Happy coding!</td>
-
-
-
-</tr>
-
-
-</table>
- 
+Happy coding!
