@@ -1,6 +1,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import gspread
 from google.oauth2.service_account import Credentials
+from pprint import pprint
 
 SCOPE = [
 "https://www.googleapis.com/auth/spreadsheets",
@@ -68,12 +69,39 @@ def update_cake_sales_worksheet(data):
     """
     Update sales worksheet, add new row with the list data provided
     """
-    print("Updating sales worksheet...\n")
+    print("Updating Cake sales worksheet...\n")
     sales_worksheet = SHEET.worksheet("sales")
     sales_worksheet.append_row(data)
-    print("Sales worksheet updated successfully.\n")
+    print("Cake Sales worksheet updated successfully.\n")
 
 
-data = get_cake_sales_data()
-cake_sales_data = [int(num) for num in data]
-update_cake_sales_worksheet(cake_sales_data)
+# Comparison Method 
+def calculate_cake_surplus_data(sales_row):
+    """
+    Compare sales with stock and calculate the cake surplus for each item type.
+
+    The surplus is defined as the sales figure subtracted from the stock:
+    - Positive cake surplus indicates waste
+    - Negative cake surplus indicates extra made when stock was sold out.
+    """
+    print("Calculating cake surplus data...\n")
+    stock = SHEET.worksheet("stock").get_all_values()
+    # to only the last row in the stock
+    stock_row = stock[-1]
+    print(stock_row)
+
+
+#  Run the main program functions
+def main_cake_run():
+    """
+    Run the main program functions
+    """
+    data = get_cake_sales_data()
+    cake_sales_data = [int(num) for num in data]
+    update_cake_sales_worksheet(cake_sales_data)
+    calculate_cake_surplus_data(cake_sales_data)
+
+ 
+if __name__ == '__main__':
+    print("Welcome to Love Cake Data Automation")
+    main_cake_run()
