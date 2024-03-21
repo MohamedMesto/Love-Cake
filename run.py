@@ -74,12 +74,11 @@ def update_cake_sales_worksheet(data):
     sales_worksheet.append_row(data)
     print("Cake Sales worksheet updated successfully.\n")
 
-
 # Update sales worksheet, add new row with the list data provided
     
 def update_cake_surplus_worksheet(data):
     """
-    Update cake surplus worksheet, add new row with the list data provided
+    # Update cake surplus worksheet, add new row with the list data provided
     """
     print("Updating Cake surplus worksheet...\n")
     cake_surplus_worksheet = SHEET.worksheet("surplus")
@@ -90,18 +89,18 @@ def update_cake_surplus_worksheet(data):
 # Comparison Method 
 def calculate_cake_surplus_data(sales_row):
     """
-    Compare sales with stock and calculate the cake surplus for each item type.
+  #  Compare sales with stock and calculate the cake surplus for each item type.
 
-    The surplus is defined as the sales figure subtracted from the stock:
-    - Positive cake surplus indicates waste
-    - Negative cake surplus indicates extra made when stock was sold out.
+  #  The surplus is defined as the sales figure subtracted from the stock:
+   # - Positive cake surplus indicates waste
+   # - Negative cake surplus indicates extra made when stock was sold out.
     """
     print("Calculating cake surplus data...\n")
     stock = SHEET.worksheet("stock").get_all_values()
     # to only the last row in the stock
     stock_row = stock[-1]
 
-
+ 
 
     cake_surplus_data = []
     for stock, sales in zip(stock_row, sales_row):
@@ -112,6 +111,25 @@ def calculate_cake_surplus_data(sales_row):
     return cake_surplus_data
 
 
+# get last 5 entriesof the cake sales
+def get_last_5_entries_cake_sales():
+    """
+    Collects columns of data from sales worksheet, collecting
+    the last 5 entries for each sandwich and returns the data
+    as a list of lists.
+    """
+    sales = SHEET.worksheet("sales")
+
+    columns = []
+    for ind in range(1, 6):
+        column = sales.col_values(ind)
+        columns.append(column[-4:])
+
+    return columns
+
+
+
+#  update worksheet
 def update_worksheet(data, worksheet):
     """
     Receives a list of integers to be inserted into a worksheet
@@ -121,6 +139,23 @@ def update_worksheet(data, worksheet):
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(data)
     print(f"{worksheet} worksheet updated successfully\n")
+
+# calculate stock data
+def calculate_stock_data(data):
+    """
+    Calculate the average stock for each item type, adding 10%
+    """
+    print("Calculating stock data...\n")
+    new_stock_data = []
+
+    for column in data:
+        int_column = [int(num) for num in column]
+        average = sum(int_column) / len(int_column)
+        stock_num = average * 1.1
+        new_stock_data.append(round(stock_num))
+
+    return new_stock_data
+
 
 
 #  Run the main program functions
@@ -133,7 +168,9 @@ def main_cake_run():
     update_worksheet(cake_sales_data, "sales")
     new_surplus_data = calculate_cake_surplus_data(cake_sales_data)
     update_worksheet(new_surplus_data, "surplus")
- 
+    sales_columns = get_last_5_entries_cake_sales()
+    stock_data = calculate_stock_data(sales_columns)
+    update_worksheet(stock_data, "stock")
 
  
 if __name__ == '__main__':
