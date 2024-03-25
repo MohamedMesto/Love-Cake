@@ -28,7 +28,7 @@ def get_cake_sales_data():
         print("Data should be five numbers, separated by commas.")
         print("Example: 10,20,30,40,50\n")
 
-        data_str = input("Enter your data here:/n")
+        data_str = input("Enter your data here:\n")
         cake_sales_data = data_str.split(",")
         if validate_cake_data(cake_sales_data):
            print("Cake Data Insertion is valid!")
