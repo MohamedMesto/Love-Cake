@@ -75,7 +75,7 @@ This project is licensed under the MIT License, which means you are free to use,
 
    ## fixed bugs
 
-   
+
 
 
 
@@ -109,8 +109,9 @@ This project is licensed under the MIT License, which means you are free to use,
 # credits:
 
 
+- Some images from the website were sourced from [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/)
+- Images were compressed by [iloveimg.com](https://www.iloveimg.com/de)
+- Image optimisation was learned from [Layout, Flywheel](https://getflywheel.com/layout/optimize-images-for-web/#file-type)
+- Some of the commands, statement are sourced from the our course from Code Institute.
+-  Logo is sourced from [walmart.com](https://www.walmart.com)  
 
-
----
-
-Happy coding!
