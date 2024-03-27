@@ -176,9 +176,10 @@ class Battleship_Game:
 
 
 ######################################## Main ###########################################
-# Start the game by creating a Battleship_Game instance with a given Game_Board game_size
+# Start the game by creating a Battleship Game instance with a given Game_Board game_size
 
 if __name__ == "__main__":
+    print('********** Welcome to Battleship Game ********************')
     game_size = int(input("Enter the game_size of the Game_Board: "))
     game = Battleship_Game(game_size)
     game.play_game()
