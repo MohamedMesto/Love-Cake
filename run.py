@@ -69,6 +69,7 @@ class Battleship_Game:
     '''
     Battleship Game initialization and other related Functions:
     - __init__ -->>   Initialize the game with a given Game_Board game_size
+    - generate_enemy_ships -->>   Generate enemy ships with random positions
 
     '''
     def __init__(self, game_size):
@@ -79,6 +80,29 @@ class Battleship_Game:
 
         # List to store the enemy's ships' positions
         self.enemy_ships = []
-        
+
         # Generate enemy ships
         self.generate_enemy_ships()
+    
+
+    def generate_enemy_ships(self):
+        ship_sizes = [5, 4, 3, 3, 2]
+        for game_size in ship_sizes:
+            # Randomly choose horizontal or vertical orientation
+            orientation = random.choice(['h', 'v'])
+            if orientation == 'h':
+                # If horizontal, generate random x and y within the Game_Board game_size
+                x = random.randint(0, self.game_size - game_size)
+                y = random.randint(0, self.game_size - 1)
+            else:
+                # If vertical, generate random x and y within the Game_Board game_size
+                x = random.randint(0, self.game_size - 1)
+                y = random.randint(0, self.game_size - game_size)
+
+
+            # Create a ship with its position and orientation
+            # Place the ship on the enemy's Game_Board
+            # Add the ship to the list of enemy ships
+            ship = (x, y, game_size, orientation)
+            self.enemy_board.place_ship(ship)
+            self.enemy_ships.append(ship)
