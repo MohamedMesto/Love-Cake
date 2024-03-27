@@ -1,11 +1,16 @@
 import random
+# Import random package to be able to create random integers
+
 
 class Game_Board:
     '''
     Game Board initialization and other related Functions:
-        - place_ship -->> Place a ship on the Game_Board
-        - display  -->>   Display the Game_Board
-        - 
+        - place_ship   -->>   Place a ship on the Game_Board
+        - display      -->>   Display the Game_Board
+        - check_hit    -->>   Check if there's a hit at the given coordinates
+        - mark_hit     -->>   Mark a hit at the given coordinates
+        - mark_miss    -->>   Mark a miss at the given coordinates
+
     '''
     def __init__(self, game_size):
         # Initialize the Game_Board with a given game_size
@@ -37,3 +42,12 @@ class Game_Board:
         for i in range(self.game_size):
             row = " ".join(self.grid[i][j] if not hide_ships or self.grid[i][j] == 'O' else 'O' for j in range(self.game_size))
             print(f"{i} {row}")
+
+    def check_hit(self, x, y):
+        return self.grid[y][x] == 'X'
+
+    def mark_hit(self, x, y):
+        self.grid[y][x] = 'H'
+
+    def mark_miss(self, x, y):
+        self.grid[y][x] = 'M'
