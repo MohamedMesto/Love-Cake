@@ -1,16 +1,17 @@
 
 ![CI logo](assets/favicon/apple-touch-icon-180x180.png) 
 
-# Cake Shop Website Calculation
+# Battleship Game
 
 ## Welcome
 
  
-Welcome to the Cake Shop Website! This project aims to provide a comprehensive solution for managing a cake shop's online presence and facilitating sales. Whether you're a small bakery looking to expand your reach or an established cake shop wanting to streamline your online sales process, this website offers a user-friendly interface for both customers and administrators.
+
+Welcome to the classic game of Battleship! Battleship is a strategic naval combat game where players engage in a thrilling battle of wits on the high seas. In this game, each player commands a fleet of ships hidden on a grid, and the objective is to strategically guess and locate the opponent's ships while concealing the positions of your own. With a combination of cunning tactics and sharp deduction skills, players aim to sink their opponent's entire fleet before theirs meets the same fate. Prepare for an adrenaline-pumping adventure filled with suspense, strategy, and exhilarating naval warfare. Get ready to embark on a voyage of excitement as you challenge your friends or test your skills against the computer in the timeless game of Battleship!
 
 # Purpose of the project:
 
-
+The purpose of the Battleship game project is to recreate the classic board game experience in a digital format, providing players with an immersive and entertaining gaming experience. By developing this project, the aim is to offer a platform where players can engage in strategic naval warfare, testing their tactical skills and decision-making abilities. Additionally, the project aims to introduce players to the timeless game of Battleship, fostering nostalgia for those familiar with the game and offering a fun and challenging experience for new players. Through this project, players can enjoy the thrill of competitive gameplay, whether facing off against friends or challenging the computer AI, all while experiencing the excitement of naval battles on the open seas. Ultimately, the purpose of the Battleship game project is to provide an enjoyable and engaging gaming experience that captures the essence of the classic board game while embracing the possibilities of digital technology.
 
 # user stories:
  
