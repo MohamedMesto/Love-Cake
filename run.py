@@ -2,6 +2,8 @@ import random
 # Import random package to be able to create random integers
 
 
+############################### Game_Board class ##############################
+
 class Game_Board:
     '''
     Game Board initialization and other related Functions:
@@ -64,6 +66,8 @@ class Game_Board:
                     return False
         return True
 
+############################### Battleship_Game class ##############################
+    
 
 class Battleship_Game:
     '''
@@ -168,3 +172,14 @@ class Battleship_Game:
             except ValueError:
                 print("Invalid input! Coordinates must be integers within the Game_Board game_size.")
         return x, y
+    
+
+
+######################################## Main ###########################################
+# Start the game by creating a Battleship_Game instance with a given Game_Board game_size
+
+if __name__ == "__main__":
+    game_size = int(input("Enter the game_size of the Game_Board: "))
+    game = Battleship_Game(game_size)
+    game.play_game()
+    
