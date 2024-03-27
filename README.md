@@ -15,16 +15,45 @@ The purpose of the Battleship game project is to recreate the classic board game
 
 # user stories:
  
+User Stories:
 
+1. As a player, I want to be able to set the size of the game board before starting a game of Battleship, so I can customize the gameplay experience according to my preferences.
+   
+2. As a player, I want to receive feedback on the validity of my guess, so I can adjust my strategy accordingly and make informed decisions during gameplay.
+
+3. As a player, I want to have a visual representation of both my own fleet and the opponent's fleet on the game board, so I can track the progress of the game and plan my next moves strategically.
+
+4. As a player, I want the option to play against the computer AI, so I can enjoy the game even when I don't have someone to play against in person.
+
+5. As a player, I want to receive notifications when I successfully hit and sink an opponent's ship, so I can feel a sense of accomplishment and progress in the game.
+
+6. As a player, I want the game to end and declare a winner once all of the opponent's ships have been sunk, so I can know when the game is over and celebrate my victory.
+
+7. As a player, I want the game to simulate realistic naval combat mechanics, such as ship placement, movement, and engagement, to enhance the immersive experience and challenge of the game.
+
+8. As a player, I want the option to play Battleship with friends in a multiplayer mode, so I can compete and strategize against real opponents in real-time.
 
 ## Features:
-Product Catalog: Display a wide variety of cakes and other baked goods with detailed descriptions and images.
-Order Management: Allow customers to place orders seamlessly, with features such as customizable cakes, delivery options, and order tracking.
-User Authentication: Secure user accounts for both customers and administrators, ensuring privacy and access control.
-Payment Integration: Enable secure online payments through various payment gateways, providing convenience and trust to customers.
-Inventory Management: Keep track of available stock, manage ingredient procurement, and receive notifications for low stock levels.
-Reporting and Analytics: Generate reports on sales, popular products, and customer trends to make informed business decisions.
-Responsive Design: Ensure a seamless experience across different devices, including desktops, tablets, and smartphones.
+
+Features:
+
+The Battleship game offers a range of exciting features to enhance the gaming experience:
+
+1. Customizable Game Board: Players have the ability to set the size of the game board, allowing for customization and flexibility in gameplay.
+
+2. Real-time Feedback: Players receive immediate feedback on the validity of their guesses, helping them adjust their strategies and make informed decisions during gameplay.
+
+3. Visual Representation: The game provides a visual representation of both the player's fleet and the opponent's fleet on the game board, allowing players to track their progress and plan strategic maneuvers.
+
+4. Single Player and Multiplayer Modes: Players can enjoy the game in single-player mode, competing against the computer AI, or challenge friends in multiplayer mode for thrilling head-to-head battles.
+
+5. Hit and Sink Notifications: Players are notified when they successfully hit and sink an opponent's ship, adding to the excitement and sense of achievement as they progress through the game.
+
+6. Realistic Naval Combat Mechanics: The game simulates realistic naval combat mechanics, including ship placement, movement, and engagement, for an immersive and challenging gameplay experience.
+
+7. End-of-Game Declaration: The game ends and declares a winner once all of the opponent's ships have been sunk, providing closure and allowing players to celebrate their victory.
+
+8. User-friendly Interface: The game features a user-friendly interface with intuitive controls and clear visuals, ensuring a smooth and enjoyable gaming experience for players of all skill levels.
 
 
 # Future features:
