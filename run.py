@@ -70,7 +70,8 @@ class Battleship_Game:
     Battleship Game initialization and other related Functions:
     - __init__             -->>   Initialize the game with a given Game_Board game_size
     - generate_enemy_ships -->>   Generate enemy ships with random positions
-    - play_game            -->>  Start the game loop
+    - play_game            -->>   Start the game loop
+    - enemy_turn           -->>   Enemy's turn to attack
 
     '''
     def __init__(self, game_size):
@@ -146,3 +147,14 @@ class Battleship_Game:
             # Enemy's turn
             self.enemy_turn()
 
+    def enemy_turn(self):
+        '''
+        Enemy's turn to attack
+        ''' 
+        x = random.randint(0, self.game_size - 1)
+        y = random.randint(0, self.game_size - 1)
+        if self.Game_Board.check_hit(x, y):
+            print(f"Enemy hit your ship at {x}, {y}!")
+            self.Game_Board.mark_hit(x, y)
+        else:
+            print(f"Enemy missed at {x}, {y}!")
