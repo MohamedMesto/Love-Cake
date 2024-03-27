@@ -68,8 +68,9 @@ class Game_Board:
 class Battleship_Game:
     '''
     Battleship Game initialization and other related Functions:
-    - __init__ -->>   Initialize the game with a given Game_Board game_size
+    - __init__             -->>   Initialize the game with a given Game_Board game_size
     - generate_enemy_ships -->>   Generate enemy ships with random positions
+    - play_game            -->>  Start the game loop
 
     '''
     def __init__(self, game_size):
@@ -106,3 +107,42 @@ class Battleship_Game:
             ship = (x, y, game_size, orientation)
             self.enemy_board.place_ship(ship)
             self.enemy_ships.append(ship)
+
+
+
+    def play_game(self):
+        while True:
+            # Display the player's Game_Board
+            # Display the enemy's Game_Board with hidden ships
+            print("\nYour Game_Board:")
+            self.Game_Board.display()
+            print("\nEnemy Game_Board:")
+            self.enemy_board.display(hide_ships=True)
+
+
+            # Get the user's input for coordinates to attack
+            x, y = self.get_user_input()
+
+            
+            # Check if the attack hits an enemy ship
+            # Mark the hit on the enemy's Game_Board
+            # Check if any enemy ship is sunk
+            # Mark the miss on the enemy's Game_Board
+            if self.enemy_board.check_hit(x, y):
+                print("Hit!")
+                self.enemy_board.mark_hit(x, y)
+                for ship in self.enemy_ships:
+                    if self.enemy_board.is_ship_sunk(ship):
+                        print("You sunk an enemy ship!")
+            else:
+                print("Miss!")
+                
+                self.enemy_board.mark_miss(x, y)
+
+            # Check if all enemy ships are sunk
+            if all(self.enemy_board.grid[i][j] != 'X' for i in range(self.game_size) for j in range(self.game_size)):
+                print("Congratulations! You've won!")
+                break
+            # Enemy's turn
+            self.enemy_turn()
+
