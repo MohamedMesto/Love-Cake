@@ -10,7 +10,7 @@ class Game_Board:
         - check_hit    -->>   Check if there's a hit at the given coordinates
         - mark_hit     -->>   Mark a hit at the given coordinates
         - mark_miss    -->>   Mark a miss at the given coordinates
-
+        - is_ship_sunk -->>   Check if a ship is sunk
     '''
     def __init__(self, game_size):
         # Initialize the Game_Board with a given game_size
@@ -51,3 +51,15 @@ class Game_Board:
 
     def mark_miss(self, x, y):
         self.grid[y][x] = 'M'
+
+    def is_ship_sunk(self, ship):
+        x, y, game_size, orientation = ship
+        if orientation == 'h':
+            for i in range(game_size):
+                if self.grid[y][x + i] != 'H':
+                    return False
+        else:
+            for i in range(game_size):
+                if self.grid[y + i][x] != 'H':
+                    return False
+        return True
