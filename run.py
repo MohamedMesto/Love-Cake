@@ -72,6 +72,7 @@ class Battleship_Game:
     - generate_enemy_ships -->>   Generate enemy ships with random positions
     - play_game            -->>   Start the game loop
     - enemy_turn           -->>   Enemy's turn to attack
+    - get_user_input       -->>   Get user input for coordinates
 
     '''
     def __init__(self, game_size):
@@ -148,9 +149,6 @@ class Battleship_Game:
             self.enemy_turn()
 
     def enemy_turn(self):
-        '''
-        Enemy's turn to attack
-        ''' 
         x = random.randint(0, self.game_size - 1)
         y = random.randint(0, self.game_size - 1)
         if self.Game_Board.check_hit(x, y):
@@ -158,3 +156,15 @@ class Battleship_Game:
             self.Game_Board.mark_hit(x, y)
         else:
             print(f"Enemy missed at {x}, {y}!")
+
+    def get_user_input(self):
+        while True:
+            try:
+                x = int(input("Enter X coordinate (0-{}): ".format(self.game_size - 1)))
+                y = int(input("Enter Y coordinate (0-{}): ".format(self.game_size - 1)))
+                if not (0 <= x < self.game_size and 0 <= y < self.game_size):
+                    raise ValueError
+                break
+            except ValueError:
+                print("Invalid input! Coordinates must be integers within the Game_Board game_size.")
+        return x, y
