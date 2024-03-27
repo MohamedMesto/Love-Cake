@@ -63,3 +63,22 @@ class Game_Board:
                 if self.grid[y + i][x] != 'H':
                     return False
         return True
+
+
+class Battleship_Game:
+    '''
+    Battleship Game initialization and other related Functions:
+    - __init__ -->>   Initialize the game with a given Game_Board game_size
+
+    '''
+    def __init__(self, game_size):
+        self.game_size = game_size
+        # Create the player's and enemy's boards
+        self.Game_Board = Game_Board(game_size)
+        self.enemy_board = Game_Board(game_size)
+
+        # List to store the enemy's ships' positions
+        self.enemy_ships = []
+        
+        # Generate enemy ships
+        self.generate_enemy_ships()
