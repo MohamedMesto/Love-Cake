@@ -93,7 +93,7 @@ class Battleship_Game:
     
 
     def generate_enemy_ships(self):
-        ship_sizes = [5, 4, 3, 3, 2]
+        ship_sizes = [ 4, 3, 3, 2]
         for game_size in ship_sizes:
             # Randomly choose horizontal or vertical orientation
             orientation = random.choice(['h', 'v'])
@@ -179,7 +179,9 @@ class Battleship_Game:
 # Start the game by creating a Battleship Game instance with a given Game_Board game_size
 
 if __name__ == "__main__":
-    print('********** Welcome to Battleship Game ********************')
+    print('##########################################################')
+    print('########### Welcome to  Ultimate Battleship Game #########')
+    print('##########################################################')
     game_size = int(input("Enter the game_size of the Game_Board: "))
     game = Battleship_Game(game_size)
     game.play_game()
