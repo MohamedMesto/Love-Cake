@@ -1,19 +1,31 @@
 
 ![CI logo](assets/favicon/apple-touch-icon-180x180.png) 
 
-# Battleship Game
+# Ultimate Battleship Game
 
 ## Welcome
 
- 
-
 Welcome to the classic game of Battleship! Battleship is a strategic naval combat game where players engage in a thrilling battle of wits on the high seas. In this game, each player commands a fleet of ships hidden on a grid, and the objective is to strategically guess and locate the opponent's ships while concealing the positions of your own. With a combination of cunning tactics and sharp deduction skills, players aim to sink their opponent's entire fleet before theirs meets the same fate. Prepare for an adrenaline-pumping adventure filled with suspense, strategy, and exhilarating naval warfare. Get ready to embark on a voyage of excitement as you challenge your friends or test your skills against the computer in the timeless game of Battleship! However, the game could be played via Python Terminal game.
 
-# Purpose of the project:
+
+[Here is the live version of the project portfolio ](https://love-cake-0ca041934c7d.herokuapp.com/)
+
+
+![devices](assets/images/readme_images/devices.png)
+
+## How to Play:
+
+
+In Battleship, players engage in a strategic naval battle where the objective is to sink the opponent's fleet before they sink yours. The game begins with each player secretly placing their ships on their grid, which is typically a 10x10 board. But in our case, we have the option to enter the game size at the beginning which could start with 2. Ships vary in size, ranging from a single-cell destroyer to a larger aircraft carrier spanning five cells. Once the ships are placed, players take turns guessing the coordinates of their opponent's ships by calling out a row and column on the grid. For example, "B4" would represent the cell in the second row and fourth column. After each guess, the opponent responds with "Hit" if a ship is present at the guessed coordinates, or "Miss" if not. If a hit is confirmed, the player continues guessing until they miss. The game continues until one player successfully sinks all of their opponent's ships. Strategic thinking, deduction, and a bit of luck are key to emerging victorious in this classic game of Battleship.
+
+
+
+
+## Purpose of the project:
 
 The purpose of the Battleship game project is to recreate the classic board game experience in a digital format, providing players with an immersive and entertaining gaming experience. By developing this project, the aim is to offer a platform where players can engage in strategic naval warfare, testing their tactical skills and decision-making abilities. Additionally, the project aims to introduce players to the timeless game of Battleship, fostering nostalgia for those familiar with the game and offering a fun and challenging experience for new players. Through this project, players can enjoy the thrill of competitive gameplay, whether facing off against friends or challenging the computer AI, all while experiencing the excitement of naval battles on the open seas. Ultimately, the purpose of the Battleship game project is to provide an enjoyable and engaging gaming experience that captures the essence of the classic board game while embracing the possibilities of digital technology.
 
-# user stories:
+## user stories:
  
 User Stories:
 
