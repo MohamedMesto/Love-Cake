@@ -198,9 +198,16 @@ class Battleship_Game:
 
 if __name__ == "__main__":
     print('##########################################################')
-    print('########### Welcome to  Ultimate Battleship Game #########')
+    print('########### Welcome to the Ultimate Battleship Game #########')
     print('##########################################################')
-    game_size = int(input("Enter the game_size of the Game_Board (it should be greater than 1):  "))
+    while True:
+        try:
+            game_size = int(input("Enter the game size of the Game_Board (it should be greater than 1): "))
+            if game_size <= 1:
+                raise ValueError
+            break
+        except ValueError:
+            print("Invalid input! The game size must be an integer greater than 1.")
     game = Battleship_Game(game_size)
     game.play_game()
     
