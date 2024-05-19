@@ -8,7 +8,7 @@
 Welcome to the classic game of Battleship! Battleship is a strategic naval combat game where players engage in a thrilling battle of wits on the high seas. In this game, each player commands a fleet of ships hidden on a grid, and the objective is to strategically guess and locate the opponent's ships while concealing the positions of your own. With a combination of cunning tactics and sharp deduction skills, players aim to sink their opponent's entire fleet before theirs meets the same fate. Prepare for an adrenaline-pumping adventure filled with suspense, strategy, and exhilarating naval warfare. Get ready to embark on a voyage of excitement as you challenge your friends or test your skills against the computer in the timeless game of Battleship! However, the game could be played via Python Terminal game.
 
 
-[Here is the live version of the project portfolio ](https://love-cake-0ca041934c7d.herokuapp.com/)
+[Here is the live version of the project](https://love-cake-0ca041934c7d.herokuapp.com/)
 
 
 ![devices](assets/images/readme_images/devices.png)
@@ -16,7 +16,7 @@ Welcome to the classic game of Battleship! Battleship is a strategic naval comba
 ## How to Play:
 
 
-In Battleship, players engage in a strategic naval battle where the objective is to sink the opponent's fleet before they sink yours. The game begins with each player secretly placing their ships on their grid, which is typically a 10x10 board. But in our case, we have the option to enter the game size at the beginning which could start with 2. Ships vary in size, ranging from a single-cell destroyer to a larger aircraft carrier spanning five cells. Once the ships are placed, players take turns guessing the coordinates of their opponent's ships by calling out a row and column on the grid. For example, "B4" would represent the cell in the second row and fourth column. After each guess, the opponent responds with "Hit" if a ship is present at the guessed coordinates, or "Miss" if not. If a hit is confirmed, the player continues guessing until they miss. The game continues until one player successfully sinks all of their opponent's ships. Strategic thinking, deduction, and a bit of luck are key to emerging victorious in this classic game of Battleship.
+In Battleship, players engage in a strategic naval battle where the objective is to sink the opponent's fleet before they sink yours. The game begins with each player secretly placing their ships on their grid, which is typically a 10x10 board. But in our case, we have the option to enter the game size at the beginning which could start with 2. Once the ships are placed, players take turns guessing the coordinates of their opponent's ships by calling out a row and column on the grid. For example, "B4" would represent the cell in the second row and fourth column. After each guess, the opponent responds with "Hit" if a ship is present at the guessed coordinates, or "Miss" if not. If a hit is confirmed, the player continues guessing until they miss. The game continues until one player successfully sinks all of their opponent's ships. Strategic thinking, deduction, and a bit of luck are key to emerging victorious in this classic game of Battleship.
 
 
 
@@ -41,23 +41,21 @@ User Stories:
 
 6. As a player, I want the game to end and declare a winner once all of the opponent's ships have been sunk, so I can know when the game is over and celebrate my victory.
 
-7. As a player, I want the game to simulate realistic naval combat mechanics, such as ship placement, movement, and engagement, to enhance the immersive experience and challenge of the game.
 
-8. As a player, I want the option to play Battleship with friends in a multiplayer mode, so I can compete and strategize against real opponents in real-time.
 
 ## Features:
 
-Features:
+### Exiting Features:
 
 The Battleship game offers a range of exciting features to enhance the gaming experience:
 
-1. Customizable Game Board: Players have the ability to set the size of the game board, allowing for customization and flexibility in gameplay.
+1. Customizable Game Board: Player have the ability to set the size of the game board, allowing for customization and flexibility in gameplay.
 
-2. Real-time Feedback: Players receive immediate feedback on the validity of their guesses, helping them adjust their strategies and make informed decisions during gameplay.
+2. Real-time Feedback: Player receive immediate feedback on the validity of their guesses, helping them adjust their strategies and make informed decisions during gameplay.
 
-3. Visual Representation: The game provides a visual representation of both the player's fleet and the opponent's fleet on the game board, allowing players to track their progress and plan strategic maneuvers.
+3. Visual Representation: The game provides a visual representation of both the player's fleet and the opponent's fleet on the game board, allowing the player to track his/her progress and plan strategic maneuvers.
 
-4. Single Player and Multiplayer Modes: Players can enjoy the game in single-player mode, competing against the computer AI, or challenge friends in multiplayer mode for thrilling head-to-head battles.
+4. Single Player: Player can enjoy the game in single-player mode, competing against the computer AI.
 
 5. Hit and Sink Notifications: Players are notified when they successfully hit and sink an opponent's ship, adding to the excitement and sense of achievement as they progress through the game.
 
@@ -66,11 +64,17 @@ The Battleship game offers a range of exciting features to enhance the gaming ex
 7. End-of-Game Declaration: The game ends and declares a winner once all of the opponent's ships have been sunk, providing closure andb allowing players to celebrate their victory.
 
 8. User-friendly Interface: The game features a user-friendly interface with intuitive controls and clear visuals, ensuring a smooth and enjoyable gaming experience for players of all skill levels.
+   
+9. It offers a possibility to display the remaining ships for both the player and the opponent.
 
 
-# Future features:
+### Future features:
 
+1. As a player, I want the game to simulate realistic naval combat mechanics, such as ship placement, movement, and engagement, to enhance the immersive experience and challenge of the game.
 
+2. As a player, I want the option to play Battleship with friends in a multiplayer mode, so I can compete and strategize against real opponents in real-time. E.i: challenge friends in multiplayer mode for thrilling head-to-head battles.
+
+3. As a player, I want the option that my Ships are vary in size, ranging from a single-cell destroyer to a larger aircraft carrier spanning five cells. 
 
 
 # Flowchart
