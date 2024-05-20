@@ -105,10 +105,11 @@ This Python script serves as a data model for a simplified version of the classi
 
 
 # Testing
-
+ 
 I have manually tested the project by doing the following:
-- Passed the Code via a PEP8 linter and confirmed there were no problems.
-- 
+- Given invalid inputs: i.e: strings instead of integers, out-of-bounds inputs, same input twice 
+- Tested in my local terminal and the Code Institute Heroku terminal.
+
 
 ## Bugs 
 
@@ -123,6 +124,16 @@ I have manually tested the project by doing the following:
   
 ![Bugs_fixed1](assets/images/readme_images/Bugs_fixed1.png)
 
+![no_errors](assets/images/readme_images/no_errors.png)
+
+### Remaining Bugs
+- All clear, no errors found
+
+
+### Validator Testing 
+- Passed the Code via a [PEP8](https://pep8ci.herokuapp.com/#) CI Python Linter and confirmed there were no problems.
+
+![no_errors](assets/images/readme_images/no_errors.png)
 
 
 ## Getting Started:
@@ -144,26 +155,19 @@ This project is licensed under the MIT License, which means you are free to use,
 - Your code must be placed in the `run.py` file
 - Your dependencies must be placed in the `requirements.txt` file
 - Do not edit any of the other files or your code may not deploy properly
-
-
-
-
-
-# Testing:
-   ##  code validation
-
-
-   ##  test cases (user story based with screenshots)
-
-
-   ## fixed bugs
-
-
-
-
+- 
 
 # Deployment:
-##  via code anywhere
+
+This project was deployed using the Code Institute mock terminal for Heroku.
+- Deployment steps:
+    - Fork or clone this repository
+    - Create a new Heroku app
+    - Set the buildbacks to `Python` and `NodeJS` in that order
+    - Associate the Heroku app with the repository
+    - Click **Deploy**.
+
+
 
 
 
@@ -174,10 +178,10 @@ This project is licensed under the MIT License, which means you are free to use,
 
 ### Creating the Heroku app
 
-    When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-    1. `heroku/python`
-    2. `heroku/nodejs`
+1. `heroku/python`
+2. `heroku/nodejs`
 
     You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
@@ -185,13 +189,14 @@ This project is licensed under the MIT License, which means you are free to use,
 
     Connect your GitHub repository and deploy as normal.
 
-    ## Constraints
+## Constraints
 
     The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
-# credits:
+# Credits:
 
-
+- Code Institute for the deployment terminal.
+- Wikipedia for the details of the Battleships game.
 - Some images from the website were sourced from [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/)
 - Images were compressed by [iloveimg.com](https://www.iloveimg.com/de)
 - Image optimisation was learned from [Layout, Flywheel](https://getflywheel.com/layout/optimize-images-for-web/#file-type)

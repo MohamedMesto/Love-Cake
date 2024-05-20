@@ -1,6 +1,7 @@
 import random
 # Import random package to be able to create random integers
 
+
 '''
 ############################### Game_Board class ##############################
 '''
@@ -41,7 +42,9 @@ class Game_Board:
     def display(self, hide_ships=False):
         print("  " + " ".join(str(i) for i in range(self.game_size)))
         for i in range(self.game_size):
-            row = " ".join(self.grid[i][j] if not hide_ships or self.grid[i][j] == 'O' else 'S' for j in range(self.game_size))
+            row = " ".join(self.grid[i][j] if not hide_ships or
+                           self.grid[i][j] == 'O' else 'S'
+                           for j in range(self.game_size))
             print(f"{i} {row}")
 
     '''
@@ -121,9 +124,9 @@ class Battleship_Game:
             # Create a ship with its position and orientation
             # Place the ship on the enemy's Game_Board
             # Add the ship to the list of enemy ships
-        ship = (x, y, game_size, orientation)
-        self.enemy_board.place_ship(ship)
-        self.enemy_ships.append(ship)
+            ship = (x, y, game_size, orientation)
+            self.enemy_board.place_ship(ship)
+            self.enemy_ships.append(ship)
 
     def play_game(self):
         while True:
@@ -156,7 +159,9 @@ class Battleship_Game:
                 self.enemy_board.mark_miss(x, y)
 
             # Check if all enemy ships are sunk
-            if all(self.enemy_board.grid[i][j] != 'X' for i in range(self.game_size) for j in range(self.game_size)):
+            if all(self.enemy_board.grid[i][j] != 'X'
+                   for i in range(self.game_size)
+                   for j in range(self.game_size)):
                 print('####################################################')
                 print("############# Congratulations! You've won! #########")
                 print('####################################################')
@@ -176,13 +181,16 @@ class Battleship_Game:
     def get_user_input(self):
         while True:
             try:
-                x = int(input("Enter X coordinate (0-{}): ".format(self.game_size - 1)))
-                y = int(input("Enter Y coordinate (0-{}): ".format(self.game_size - 1)))
+                x = int(input("Enter X coordinate (0-{}): "
+                              .format(self.game_size - 1)))
+                y = int(input("Enter Y coordinate (0-{}): "
+                              .format(self.game_size - 1)))
                 if not (0 <= x < self.game_size and 0 <= y < self.game_size):
                     raise ValueError
                 break
             except ValueError:
-                print("Invalid input! Coordinates must be integers within the Game_Board game_size.")
+                print("Invalid input! Coordinates must be integers within the "
+                      "Game_Board game_size.")
         return x, y
 
 
@@ -198,11 +206,15 @@ if __name__ == "__main__":
     print('##########################################################')
     while True:
         try:
-            game_size = int(input("Enter the size of the Game_Board ( >1):"))
+            game_size = int(
+                input(
+                    "Enter the Game size of the Game_Board "
+                    "(It should be greater than 1):"))
             if game_size <= 1:
                 raise ValueError
             break
         except ValueError:
-            print("Invalid input! game size must be an integer bigger than 1.")
+            print(
+                "Invalid input! The Game size must be an integer > 1.")
     game = Battleship_Game(game_size)
     game.play_game()
