@@ -1,8 +1,10 @@
 import random
 # Import random package to be able to create random integers
 
-
+'''
 ############################### Game_Board class ##############################
+'''
+
 
 class Game_Board:
     '''
@@ -17,13 +19,10 @@ class Game_Board:
     def __init__(self, game_size):
         # Initialize the Game_Board with a given game_size
         self.game_size = game_size
-
         # Create a 2D grid representing the Game_Board filled with 'O's
         self.grid = [['O' for _ in range(game_size)] for _ in range(game_size)]
-        
         # List to store the ships' positions
         self.ships = []
-
 
     def place_ship(self, ship):
         x, y, game_size, orientation = ship
@@ -45,9 +44,10 @@ class Game_Board:
             row = " ".join(self.grid[i][j] if not hide_ships or self.grid[i][j] == 'O' else 'S' for j in range(self.game_size))
             print(f"{i} {row}")
 
-    ###  method display_fleet_status aims to display the remaining ships for both 
-    ###  the player and the opponent.
-
+    '''
+    method display_fleet_status aims to display
+    the remaining ships for both the player and the opponent.
+    '''
     def display_fleet_status(self):
         print("\nPlayer's Fleet:")
         print("Remaining Ships: ", len(self.ships))
@@ -75,13 +75,16 @@ class Game_Board:
                     return False
         return True
 
-############################### Battleship_Game class ##############################
-    
+
+'''
+############################ Battleship_Game class ##########################
+'''
+
 
 class Battleship_Game:
     '''
     Battleship Game initialization and other related Functions:
-    - __init__             -->>   Initialize the game with a given Game_Board game_size
+    - __init__             -->>   Initialize the game
     - generate_enemy_ships -->>   Generate enemy ships with random positions
     - play_game            -->>   Start the game loop
     - enemy_turn           -->>   Enemy's turn to attack
@@ -99,32 +102,28 @@ class Battleship_Game:
 
         # Generate enemy ships
         self.generate_enemy_ships()
-    
 
     def generate_enemy_ships(self):
-       # ship_sizes = [ 4, 3, 3, 2]
         ship_sizes = [2]
         for game_size in ship_sizes:
             # Randomly choose horizontal or vertical orientation
             orientation = random.choice(['h', 'v'])
             if orientation == 'h':
-                # If horizontal, generate random x and y within the Game_Board game_size
+                # If horizontal, generate random x and y
+                # within the Game_Board game_size
                 x = random.randint(0, self.game_size - game_size)
                 y = random.randint(0, self.game_size - 1)
             else:
-                # If vertical, generate random x and y within the Game_Board game_size
+                # If vertical, generate random x and y
+                # within the Game_Board game_size
                 x = random.randint(0, self.game_size - 1)
                 y = random.randint(0, self.game_size - game_size)
-
-
             # Create a ship with its position and orientation
             # Place the ship on the enemy's Game_Board
             # Add the ship to the list of enemy ships
         ship = (x, y, game_size, orientation)
         self.enemy_board.place_ship(ship)
         self.enemy_ships.append(ship)
-
-
 
     def play_game(self):
         while True:
@@ -135,16 +134,13 @@ class Battleship_Game:
             print("\nEnemy Game_Board:")
             self.enemy_board.display(hide_ships=True)
 
-
             # Display fleet status
             self.Game_Board.display_fleet_status()
             self.enemy_board.display_fleet_status()
 
-
             # Get the user's input for coordinates to attack
             x, y = self.get_user_input()
 
-            
             # Check if the attack hits an enemy ship
             # Mark the hit on the enemy's Game_Board
             # Check if any enemy ship is sunk
@@ -154,18 +150,16 @@ class Battleship_Game:
                 self.enemy_board.mark_hit(x, y)
                 for ship in self.enemy_ships:
                     if self.enemy_board.is_ship_sunk(ship):
-                        print("############# You sunk an enemy ship!###############")
+                        print("######## You sunk an enemy ship! ###########")
             else:
                 print("Miss!")
-                
                 self.enemy_board.mark_miss(x, y)
-
 
             # Check if all enemy ships are sunk
             if all(self.enemy_board.grid[i][j] != 'X' for i in range(self.game_size) for j in range(self.game_size)):
-                print('##########################################################')
-                print("############# Congratulations! You've won! ###############")
-                print('##########################################################')
+                print('####################################################')
+                print("############# Congratulations! You've won! #########")
+                print('####################################################')
                 break
             # Enemy's turn
             self.enemy_turn()
@@ -190,24 +184,25 @@ class Battleship_Game:
             except ValueError:
                 print("Invalid input! Coordinates must be integers within the Game_Board game_size.")
         return x, y
-    
 
 
-######################################## Main ###########################################
-# Start the game by creating a Battleship Game instance with a given Game_Board game_size
+'''
+############################## Main ##################################
+# Start the game by creating a Battleship Game instance
+# with a given Game_Board game_size
+'''
 
 if __name__ == "__main__":
     print('##########################################################')
-    print('########### Welcome to the Ultimate Battleship Game #########')
+    print('######## Welcome to the Ultimate Battleship Game #########')
     print('##########################################################')
     while True:
         try:
-            game_size = int(input("Enter the game size of the Game_Board (it should be greater than 1): "))
+            game_size = int(input("Enter the size of the Game_Board ( >1):"))
             if game_size <= 1:
                 raise ValueError
             break
         except ValueError:
-            print("Invalid input! The game size must be an integer greater than 1.")
+            print("Invalid input! game size must be an integer bigger than 1.")
     game = Battleship_Game(game_size)
     game.play_game()
-    

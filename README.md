@@ -51,21 +51,43 @@ The Battleship game offers a range of exciting features to enhance the gaming ex
 
 1. Customizable Game Board: Player have the ability to set the size of the game board, allowing for customization and flexibility in gameplay.
 
+ 
+![insert_game_size1](assets/images/readme_images/insert_game_size1.png)
+
+![insert_game_size2](assets/images/readme_images/insert_game_size2.png)
+
 2. Real-time Feedback: Player receive immediate feedback on the validity of their guesses, helping them adjust their strategies and make informed decisions during gameplay.
 
 3. Visual Representation: The game provides a visual representation of both the player's fleet and the opponent's fleet on the game board, allowing the player to track his/her progress and plan strategic maneuvers.
 
 4. Single Player: Player can enjoy the game in single-player mode, competing against the computer AI.
 
+![start_game](assets/images/readme_images/start_game.png)
+
+
+
+
+
 5. Hit and Sink Notifications: Players are notified when they successfully hit and sink an opponent's ship, adding to the excitement and sense of achievement as they progress through the game.
 
-6. Realistic Naval Combat Mechanics: The game simulates realistic naval combat mechanics, including ship placement, movement, and engagement, for an immersive and challenging gameplay experience.
 
-7. End-of-Game Declaration: The game ends and declares a winner once all of the opponent's ships have been sunk, providing closure andb allowing players to celebrate their victory.
+![play_game1](assets/images/readme_images/play_game1.png)
 
-8. User-friendly Interface: The game features a user-friendly interface with intuitive controls and clear visuals, ensuring a smooth and enjoyable gaming experience for players of all skill levels.
+
+
+
+
+
+6. End-of-Game Declaration: The game ends and declares a winner once all of the opponent's ships have been sunk, providing closure andb allowing players to celebrate their victory.
+
+7. User-friendly Interface: The game features a user-friendly interface with intuitive controls and clear visuals, ensuring a smooth and enjoyable gaming experience for players of all skill levels.
    
-9. It offers a possibility to display the remaining ships for both the player and the opponent.
+8. It offers a possibility to display the remaining ships for both the player and the opponent.
+
+![play_game2](assets/images/readme_images/play_game2.png)
+
+![Win_the_game](assets/images/readme_images/Win_the_game.png)
+
 
 
 ### Future features:
@@ -77,14 +99,29 @@ The Battleship game offers a range of exciting features to enhance the gaming ex
 3. As a player, I want the option that my Ships are vary in size, ranging from a single-cell destroyer to a larger aircraft carrier spanning five cells. 
 
 
-# Flowchart
+# Data Model
+
+This Python script serves as a data model for a simplified version of the classic game Battleship. It comprises two main classes: `Game_Board` and `Battleship_Game`. The `Game_Board` class models the game board's state, providing methods to place ships, display the board, and manage hits and misses. Ships are represented by their coordinates and orientation, stored in a grid initialized with 'O' for open water. The class includes logic to check for hits, mark hits and misses, and determine if a ship has been sunk. The `Battleship_Game` class manages the overall game flow, including generating random enemy ship placements, handling player input for attacks, and alternating turns between the player and the computer. It ensures game integrity by validating inputs and checking for game-winning conditions. The script’s structure emphasizes object-oriented principles, encapsulating the game state and behavior within distinct, reusable components. This design facilitates clear separation of concerns, making the code more maintainable and extendable for future enhancements.
 
 
+# Testing
 
+I have manually tested the project by doing the following:
+- Passed the Code via a PEP8 linter and confirmed there were no problems.
+- 
 
+## Bugs 
 
-# technology
+![Bugs1](assets/images/readme_images/Bugs1.png)
 
+![Bugs2](assets/images/readme_images/Bugs2.png)
+
+![Bugs3](assets/images/readme_images/Bugs3.png)
+
+### Solved Bugs
+-  Too many leading '#' for block comment and others were faced. Therefore there were fixed as shown here in this result:
+  
+![Bugs_fixed1](assets/images/readme_images/Bugs_fixed1.png)
 
 
 
@@ -159,5 +196,5 @@ This project is licensed under the MIT License, which means you are free to use,
 - Images were compressed by [iloveimg.com](https://www.iloveimg.com/de)
 - Image optimisation was learned from [Layout, Flywheel](https://getflywheel.com/layout/optimize-images-for-web/#file-type)
 - Some of the commands, statement are sourced from the our course from Code Institute.
--  Logo is sourced from [walmart.com](https://www.walmart.com)  
-
+-  Some Ideas, and suggestions were sourced from the YouTube channels:  [ArjanCodes](https://www.youtube.com/watch?v=u3yo-TjeIDg) , [Knowledge Mavens](https://www.youtube.com/watch?v=alJH_c9t4zw) 
+- Some Ideas, and suggestions were sourced from [Austin Montgomery](https://bigmonty12.github.io/battleship)
